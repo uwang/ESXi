@@ -5,7 +5,7 @@ cat>/etc/apt/sources.list<<EOF
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
 # deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+# deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
 # deb-src http://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
 deb http://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
