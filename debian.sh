@@ -1,3 +1,4 @@
+apt update
 apt install apt-transport-https ca-certificates -y
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -18,7 +19,10 @@ cat>/etc/apt/sources.list.d/raspi.list<<EOF
 deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
 EOF
 
-apt update
-apt install -y linux-image-arm64 grub-efi-arm64
+apt-get clean
+apt install -y linux-image-arm64 
+apt-get clean
+
+apt install -y grub-efi-arm64
 grub-install --efi-directory=/boot
 update-grub
