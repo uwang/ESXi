@@ -21,7 +21,7 @@ apt install apt-transport-https ca-certificates -y
 
 # 切换到 https 源
 sed -i 's/http/https/g' /etc/apt/sources.list
-sed -i 's/http/https/g' /etc/apt/sources.list.d/raspi.list
+#sed -i 's/http/https/g' /etc/apt/sources.list.d/raspi.list
 apt update
 
 apt-get clean
