@@ -19,15 +19,26 @@ EOF
 apt update
 apt install apt-transport-https ca-certificates -y
 
+# 清理空间
+apt-get autoclean
+apt-get clean
+
 # 切换到 https 源
 sed -i 's/http/https/g' /etc/apt/sources.list
 #sed -i 's/http/https/g' /etc/apt/sources.list.d/raspi.list
 apt update
 
-apt-get clean
 apt install -y linux-image-arm64
 
+# 清理空间
+apt-get autoclean
 apt-get clean
+
 apt install -y grub-efi-arm64
+
+# 清理空间
+apt-get autoclean
+apt-get clean
+
 grub-install --efi-directory=/boot
 update-grub
