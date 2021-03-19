@@ -20,8 +20,7 @@ apt update
 apt install apt-transport-https ca-certificates -y
 
 # 清理空间
-apt-get autoclean
-apt-get clean
+apt autoremove && apt autoclean
 
 # 切换到 https 源
 sed -i 's/http/https/g' /etc/apt/sources.list
@@ -31,14 +30,12 @@ apt update
 apt install -y linux-image-arm64
 
 # 清理空间
-apt-get autoclean
-apt-get clean
+apt autoremove && apt autoclean
 
 apt install -y grub-efi-arm64
 
 # 清理空间
-apt-get autoclean
-apt-get clean
+apt autoremove && apt autoclean
 
 grub-install --efi-directory=/boot
 update-grub
