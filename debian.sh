@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
 
