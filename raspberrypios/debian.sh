@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
-cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
+cp /etc/apt/sources.list "/etc/apt/sources.list-$(date +%Y%m%d%H%M%S)"
+cp /etc/apt/sources.list.d/raspi.list "/etc/apt/sources.list.d/raspi.list-$(date +%Y%m%d%H%M%S)"
 
 cat>/etc/apt/sources.list<<EOF
 deb http://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free

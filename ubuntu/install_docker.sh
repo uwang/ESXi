@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# https://docs.docker.com/engine/install/ubuntu/
 # 1. Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
@@ -28,6 +29,7 @@ su - ${USER}
 # Confirm that your user is now added to the docker group by typing:
 id -nG
 
+# https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
 # 设置镜像加速器地址
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
@@ -37,6 +39,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
+# https://github.com/docker/compose
 # Install Docoker Compose
 sudo apt install python3-pip
 pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
