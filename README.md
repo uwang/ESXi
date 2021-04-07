@@ -1,10 +1,14 @@
-# ESXi on RaspberryPi 4b 8GB
+# ESXi on Raspberry Pi 4 Model B (8GB)
 
-ESXi on Arm 运行 Raspbian
+https://flings.vmware.com/esxi-arm-edition
 
-## set_ssl.sh 用于开启 https 访问
+## ESXi 开启 https 访问
 
-## raspberrypi os
+set_ssl.sh
+
+## Raspberry Pi OS
+
+ESXi on Arm 运行 Raspberry Pi OS
 
 debian.sh 用于替换源
 
